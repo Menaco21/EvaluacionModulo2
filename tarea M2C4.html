@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea M2C4</title>
+</head>
+<body>
+    <h1> tarea en clase M2C4</h1>
+    Dato : <input type="text" name="v1" id="v1"><br>
+    <button onclick="evaluar();">evaluar</button><br>
+    <p id="res"></p>
+    
+    <script type="text/javascript">
+
+        function evaluar(){
+            let num1 = document.getElementById('v1').value;
+            n1 = parseInt(num1,10);
+            if (n1>10 || n1<2){
+                document.getElementById('res').innerHTML='el nº'+n1+' esta en el rango ';
+            }else{
+                document.getElementById('res').innerHTML='el nº'+n1+' esta fuera de rango';
+            }
+        }
+    </script>
+</body>
+</html>
