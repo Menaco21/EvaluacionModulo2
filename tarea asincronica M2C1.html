@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<p>valor inicial: <input type="text" name="n1" id="valor1"></p>
+<p>Diametro: <input type="text" name="n2" id="diam"></p>
+<p>Perimetro: <input type="text" name="n3" id="peri"></p>
+<p>Area: <input type="text" name="n4" id="area"></p>
+
+<button onclick="calcular();">calcular</button>
+		<script type="text/javascript">
+			function calcular(){
+				let valor1=document.getElementById('valor1').value;
+				let vv1=parseInt(valor1,10);
+				let diam=2*vv1;
+				let peri=2* Math.PI *vv1;
+				let area= Math.PI*vv1*vv1;
+
+				document.getElementById('diam').value=diam;
+				document.getElementById('peri').value=peri;
+				document.getElementById('area').value=area;
+				}
+		</script>
+</body>
+</html>
