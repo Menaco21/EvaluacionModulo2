@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>trabajo en clase</title>
+</head>
+	<body>
+		
+		<p>valor 1: <input type="text" name="n1" id="v1"></p>
+		<p>valor 2: <input type="text" name="n2" id="v2"></p>
+		<p>Suma: <input type="text" name="res" id="resSUM"></p>
+		<p>Resta: <input type="text" name="res" id="resRES"></p>
+		<p>Multi: <input type="text" name="res" id="resMUL"></p>
+		<p>Division: <input type="text" name="res" id="resDIV"></p>
+
+	<button onclick="calcular();">calcular</button>
+		<script type="text/javascript">
+		//let se usa dentro de una funcion
+			function calcular(){
+				let v1=document.getElementById('v1').value; 
+				let v2=document.getElementById('v2').value;
+				let vv1=parseInt(v1,10);
+				let vv2=parseInt(v2,10);
+				let resSUM=vv1+vv2;
+				let resRES=vv1-vv2;
+				let resMUL=vv1*vv2;
+				let resDIV=vv1/vv2;
+
+	document.getElementById('resSUM').value=resSUM;
+	document.getElementById('resRES').value=resRES;
+	document.getElementById('resMUL').value=resMUL;
+	document.getElementById('resDIV').value=resDIV;
+}
+
+</script>
+</body>
+</html>
