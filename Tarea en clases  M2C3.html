@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarea M2C3</title>
+</head>
+<body>
+    <h1>Calculo IVA</h1>
+    <p>Ingrese monto (1): <input type="number" id="bruto" name="bruto"></p>
+    <button onclick="calcular();"> calcular</button><br>
+    <p>Calculo IVA     (2):  <input type="number" name="Eliva" id="Eliva"></p>
+    <p>Total a pagar   (1)+(2):  <input type="number" name="total" id="total"></p>   
+         
+<script>
+        function calcular(){
+            let x = 0.19 ;
+            let y = document.getElementById('bruto').value;
+            let yy=parseInt(y,10);
+            let Eliva=(yy*x);
+            let total=yy+Eliva 
+            document.getElementById('Eliva').value=Eliva;
+            document.getElementById('total').value=total;
+        }
+    </script>
+</body>
+</html>
