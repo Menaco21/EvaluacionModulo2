@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Condicionales Asincrona</title>
+</head>
+
+<body>
+    <div class="container mt-3 text-center">
+<h1>Calcular Masa Corporal</h1>
+</div>
+    <div class="container pt-lg-3 col-6 text-center border">
+       
+        <div class="row">
+            <div class="col">
+                
+                Peso: <input placeholder="Ingrese su estatura" type="text" id="v1" name="v1">
+
+                Estatura: <input placeholder="Ingrese su peso" type="text"  id="v2" name="v2">
+
+                <button class="btn btn-info" onclick="calcular();">Calcular</button>
+                <div id="divi" class="col-6">
+                <p class="h6 text-justify " id="res"></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script type="text/javascript">
+        function calcular(){
+            let v1 = document.getElementById('v1').value;
+            let v2 = document.getElementById('v2').value;
+
+            let valor1 = parseFloat(v1);
+            let valor2 = parseFloat(v2);
+        
+            let res =valor1/(valor2 *valor2);
+            let resultado="";
+            console.log(res);
+            console.log(valor1);
+            console.log(valor2);
+
+            if (res <= 18.5){
+                resultado = "Indice de Masa Corporar Inferior al Normal:  " + res;
+            
+            } if (res >= 18.5  && res <= 24.9) {
+                resultado = "Indice de Masa Corporar  Normal:   " + res;
+             } if (res >= 25.0  && res <= 29.9) {
+                resultado = "Indice de Masa Corporar Superior al Normal:  " + res;
+            } else if (res >= 30)  {
+                resultado = "Indice de Masa Corporar Obeso:   " + res;
+            }
+            document.getElementById('res').innerHTML = resultado;
+        }
+    
+    </script>
+</body>
+
+</html>
